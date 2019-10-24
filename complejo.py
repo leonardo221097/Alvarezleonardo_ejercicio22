@@ -10,6 +10,11 @@ class Complejo():
 
     def calcula_norma(self):
         self.norma = math.sqrt(self.real**2 + self.imaginario**2)
+    def multiplica(self,b):
+        k=(self.real*b.real-self.imaginario*b.imaginario)
+        l=(self.real*b.imaginario+self.imaginario*b.real)
+        self.real = k
+        self.imaginario = l
 
     def pow(self, n):
         a = Complejo(self.real, self.imaginario)
